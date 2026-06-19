@@ -1,0 +1,85 @@
+﻿@model HousingDrey.Models.Property
+
+@{
+    ViewData["Title"] = "Ajouter un bien";
+}
+
+<div class="container mt-4">
+    <h2>Ajouter un bien immobilier</h2>
+
+    <form asp-action="Create" method="post" class="mt-4">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Titre</label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Type</label>
+                <select asp-for="Type" class="form-control">
+                    <option>Maison</option>
+                    <option>Appartement</option>
+                    <option>Studio</option>
+                    <option>Terrain</option>
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Prix</label>
+                <input asp-for="Price" class="form-control" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Quartier</label>
+                <input asp-for="Quarter" class="form-control" placeholder="Ex: Bonamoussadi" />
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label>Superficie</label>
+                <input asp-for="Surface" class="form-control" />
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label>Chambres</label>
+                <input asp-for="Bedrooms" class="form-control" />
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label>Douches</label>
+                <input asp-for="Bathrooms" class="form-control" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Statut</label>
+                <select asp-for="Status" class="form-control">
+                    <option>Disponible</option>
+                    <option>Loué</option>
+                    <option>Vendu</option>
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Lien image</label>
+                <input asp-for="ImageUrl" class="form-control" placeholder="https://..." />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Latitude</label>
+                <input asp-for="Latitude" class="form-control" placeholder="Ex: 4.0511" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Longitude</label>
+                <input asp-for="Longitude" class="form-control" placeholder="Ex: 9.7679" />
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <label>Description</label>
+                <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Enregistrer</button>
+        <a asp-action="Index" class="btn btn-secondary">Retour</a>
+    </form>
+</div>

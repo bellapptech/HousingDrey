@@ -1,0 +1,61 @@
+﻿@model HousingDrey.Models.Property
+
+@{
+    ViewData["Title"] = "Fiche du bien";
+}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<div class="container mt-4">
+    <a asp-action="Index" class="btn btn-secondary mb-3">← Retour</a>
+
+    <div class="card shadow-lg">
+        <img src="@Model.ImageUrl" class="card-img-top" style="height:350px; object-fit:cover;" />
+
+        <div class="card-body">
+            <h2>@Model.Title</h2>
+            <span class="badge bg-success mb-3">@Model.Status</span>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Type :</strong> @Model.Type</p>
+                    <p><strong>Ville :</strong> @Model.City</p>
+                    <p><strong>Quartier :</strong> @Model.Quarter</p>
+                    <p><strong>Prix :</strong> @Model.Price FCFA</p>
+                </div>
+
+                <div class="col-md-6">
+                    <p><strong>Superficie :</strong> @Model.Surface m²</p>
+                    <p><strong>Chambres :</strong> @Model.Bedrooms</p>
+                    <p><strong>Douches :</strong> @Model.Bathrooms</p>
+                    <p><strong>Coordonnées :</strong> @Model.Latitude, @Model.Longitude</p>
+                </div>
+            </div>
+
+            <hr />
+
+            <h5>Description</h5>
+            <p>@Model.Description</p>
+
+            <h5 class="mt-4">Géolocalisation du bien</h5>
+            <div id="map" style="height:400px; border-radius:10px;"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+    var latitude = @Model.Latitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
+    var longitude = @Model.Longitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
+
+    var map = L.map('map').setView([latitude, longitude], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'HousingDrey - OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([latitude, longitude]).addTo(map)
+    .bindPopup("@Model.Title - @Model.Quarter")
+    .openPopup();
+</script>
