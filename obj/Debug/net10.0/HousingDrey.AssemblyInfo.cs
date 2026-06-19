@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HousingDrey")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f82402ebe708e429fd101ab3a9ea1df078dd8e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("HousingDrey")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HousingDrey")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
