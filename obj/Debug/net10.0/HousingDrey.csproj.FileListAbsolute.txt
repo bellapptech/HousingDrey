@@ -251,4 +251,3 @@ C:\Users\POPOLY\Documents\BSWEIGHTPRO\HousingDrey\HousingDrey\obj\Debug\net10.0\
 C:\Users\POPOLY\Documents\BSWEIGHTPRO\HousingDrey\HousingDrey\obj\Debug\net10.0\HousingDrey.pdb
 C:\Users\POPOLY\Documents\BSWEIGHTPRO\HousingDrey\HousingDrey\obj\Debug\net10.0\HousingDrey.genruntimeconfig.cache
 C:\Users\POPOLY\Documents\BSWEIGHTPRO\HousingDrey\HousingDrey\obj\Debug\net10.0\ref\HousingDrey.dll
-C:\Users\POPOLY\Documents\BSWEIGHTPRO\HousingDrey\HousingDrey\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

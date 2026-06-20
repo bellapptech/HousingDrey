@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HousingDrey")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c9dfe703e49a32802ab7d940cb4cf8b873e2d39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f7b79ee4425c6a6c6245f1714b9ae64470c7f92")]
 [assembly: System.Reflection.AssemblyProductAttribute("HousingDrey")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HousingDrey")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
