@@ -1,0 +1,52 @@
+﻿@model IEnumerable<HousingDrey.Models.Reservation>
+
+<h2>Admin Dashboard</h2>
+
+<div style="display:flex; gap:20px; margin-bottom:25px;">
+    <div style="padding:20px; background:#0d6efd; color:white; border-radius:10px;">
+        <h3>@ViewBag.TotalProperties</h3>
+        <p>Properties</p>
+    </div>
+
+    <div style="padding:20px; background:#198754; color:white; border-radius:10px;">
+        <h3>@ViewBag.TotalReservations</h3>
+        <p>Reservations</p>
+    </div>
+
+    <div style="padding:20px; background:#ffc107; color:black; border-radius:10px;">
+        <h3>@ViewBag.PendingReservations</h3>
+        <p>Pending</p>
+    </div>
+</div>
+
+<p>
+    <a class="btn btn-primary" href="/Properties/Create">Add Property</a>
+    <a class="btn btn-success" href="/Reservations">View All Reservations</a>
+    <a class="btn btn-dark" href="/Properties">View Properties</a>
+</p>
+
+<h3>Latest Reservations</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Client</th>
+            <th>Phone</th>
+            <th>Visit Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.Property?.Title</td>
+                <td>@r.FullName</td>
+                <td>@r.Phone</td>
+                <td>@r.VisitDate.ToString("dd/MM/yyyy")</td>
+                <td>@r.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -11,5 +11,6 @@ namespace HousingDrey.Data
         }
 
         public DbSet<Property> Properties { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
     }
 }

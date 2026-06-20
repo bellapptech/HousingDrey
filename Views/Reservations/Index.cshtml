@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HousingDrey.Models.Reservation>
+
+<h2>All Reservations</h2>
+
+<a class="btn btn-dark mb-3" asp-controller="Dashboard" asp-action="Index">
+    Back to Dashboard
+</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Client Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Visit Date</th>
+            <th>Message</th>
+            <th>Status</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.Property?.Title</td>
+                <td>@r.FullName</td>
+                <td>@r.Phone</td>
+                <td>@r.Email</td>
+                <td>@r.VisitDate.ToString("dd/MM/yyyy")</td>
+                <td>@r.Message</td>
+                <td>@r.Status</td>
+                <td>@r.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>

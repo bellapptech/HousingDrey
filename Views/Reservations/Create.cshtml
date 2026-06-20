@@ -1,0 +1,38 @@
+﻿@model HousingDrey.Models.Reservation
+
+<h2>Property Reservation</h2>
+
+<form asp-action="Create" method="post">
+
+    <input type="hidden" asp-for="PropertyId" />
+
+    <div class="mb-3">
+        <label>Full Name</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Phone Number</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Visit Date</label>
+        <input asp-for="VisitDate" type="date" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Message</label>
+        <textarea asp-for="Message" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Submit Reservation
+    </button>
+
+</form>
